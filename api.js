@@ -270,6 +270,7 @@ exports.sendCommand = function(id, state) {
 						}
 	ju.adapterloginfo(1, 'shizophren83: command=' + service_command);
 	ju.adapterloginfo(1, 'shizophren83: control=' + service_control);
+	ju.adapterloginfo(1, 'shizophren83: serviceid=' + serviceid);
 	ju.adapterloginfo(1, 'shizophren83: value=' + value);
 	ju.adapterloginfo(1, 'shizophren83: !!!!! gardena_api_key=' + gardena_api_key);
 						
@@ -302,9 +303,12 @@ exports.sendCommand = function(id, state) {
 								adapter.log.error(err);
 								ju.adapterloginfo(1, err);
 								ju.adapterloginfo(1,'Mower Command failure.');
+								if (response) {
+									ju.adapterloginfo(1,'shizophren83: response.statusCode/Message=' + response.statusCode + '/' + response.statusMessage);
+								}
 							} else {
 								// successful
-								ju.adapterloginfo(2, 'Mower Command: successful response.statusCode/Message=' + response.statusCode + '/' + response.statusMessage);
+								ju.adapterloginfo(1, 'Mower Command: successful response.statusCode/Message=' + response.statusCode + '/' + response.statusMessage);
 							}
 						})				
 					}
