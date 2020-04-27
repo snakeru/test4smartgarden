@@ -305,6 +305,8 @@ exports.sendCommand = function(id, state) {
 								ju.adapterloginfo(1,'Mower Command failure.');
 								if (response) {
 									ju.adapterloginfo(1,'shizophren83: response.statusCode/Message=' + response.statusCode + '/' + response.statusMessage);
+									ju.adapterloginfo(1,'shizophren83: response.title=' + response.title);
+									ju.adapterloginfo(1,'shizophren83: response.detail=' + response.detail);
 								}
 							} else {
 								// successful
