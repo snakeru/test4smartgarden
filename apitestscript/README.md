@@ -4,6 +4,7 @@ Testscript zum Aufruf der Gardena Smart API ohne ioBroker.
 Dient zum Debuggen bei Problemen mit der Schnittstelle oder 
 den darin übertragenen Daten.
 
+Das Script `apitest.py` auf den Computer kopieren.
 Darin muss man gleich in den oberen Zeilen die eigenen Daten eintragen. 
 
 ```
