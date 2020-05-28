@@ -28,8 +28,7 @@ I.d.R. reichen mir die Angaben ab einer Zeile
 ### connected ###
 ```
 
-aus. Diese Ausgaben am besten per PN senden und nicht im Forum. 
-Nicht dass da doch noch irgendwo Zugangsdaten drinstehen.
+aus. 
 
 Zur Info bei evlt. fehlenden Modulen für die Nutzung von *python3*. Ich musste bei mir folgendes installieren:
 ```
