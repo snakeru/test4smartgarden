@@ -38,6 +38,7 @@ pi@iobroker:/opt/iobroker/node_modules/iobroker.smartgarden/lib $ ls -l
 total 108
 -rwxrwxrwx+ 1 iobroker iobroker   491 May  3 11:51 adapter-config.d.ts
 -rwxrwxrwx+ 1 iobroker iobroker 75261 May 31 23:52 api.js
+-rwxrwxrwx+ 1 iobroker iobroker 75237 May 31 22:27 api.js.old
 -rwxrwxrwx+ 1 iobroker iobroker  9860 May  3 11:51 history.js
 -rwxrwxrwx+ 1 iobroker iobroker 12002 May  3 11:51 predefdp.js
 -rwxrwxrwx+ 1 iobroker iobroker  3083 May  3 11:51 tools.js
