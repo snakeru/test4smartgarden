@@ -5,8 +5,10 @@ Test einer Spezialversion von `api.js`
 - mower id mit Suffix
 - invalid date
 
+**ioBroker smartgarden Adapter stoppen**
+
 Bitte die Datei austauschen im `lib`-Verzeichnis. Für einen Raspberry mit typischer ioBroker Installation
-wird das vmtl. so aussehen-
+wird das vmtl. so aussehen.
 
 
 ```
@@ -47,6 +49,7 @@ total 108
 Datum + Dateigrößen können abweichen.
 
 
+**ioBroker smartgarden Adapter starten**
 
 
 
