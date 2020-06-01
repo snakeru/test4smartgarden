@@ -1,4 +1,4 @@
-# APITEST for Gardena smart API
+# api.js test for Gardena smart API
 
 Test einer Spezialversion von `api.js`
 
