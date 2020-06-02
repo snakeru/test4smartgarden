@@ -46,6 +46,14 @@ class Client:
 
         Thread(target=run).start()
 
+def format(response):
+    formatted = [response.url, "%s %s" % (response.status_code, response.reason)]
+    for k,v in response.headers.items():
+        formatted.append("%s: %s" % (k, v))
+    formatted.append("")
+    formatted.append(r.text)
+    return "\n".join(formatted)
+
 
 if __name__ == "__main__":
     payload = {'grant_type': 'password', 'username': USERNAME, 'password': PASSWORD,
@@ -53,7 +61,7 @@ if __name__ == "__main__":
 
     print("Logging into authentication system...")
     r = requests.post(f'{AUTHENTICATION_HOST}/v1/oauth2/token', data=payload)
-    assert r.status_code == 200, r
+    assert r.status_code == 200, format(r)
     auth_token = r.json()["access_token"]
     print("Logged in auth_token=(%s)" % auth_token)
 	
@@ -62,11 +70,11 @@ if __name__ == "__main__":
         "x-api-key": API_KEY,
         "Authorization-Provider": "husqvarna",
         "Authorization": "Bearer " + auth_token
-    }
+		    }
 
     print("### get locations ###")
     r = requests.get(f'{SMART_HOST}/v1/locations', headers=headers)
-    assert r.status_code == 200, r
+    assert r.status_code == 200, format(r)
     assert len(r.json()["data"]) > 0, 'location missing - user has not setup system'
     location_id = r.json()["data"][0]["id"]
     print("LocationId=(%s)" % location_id)
@@ -84,7 +92,7 @@ if __name__ == "__main__":
     print("getting WebSocket ID...")
     r = requests.post(f'{SMART_HOST}/v1/websocket', json=payload, headers=headers)
 
-    assert r.status_code == 201, r
+    assert r.status_code == 201, format(r)
     print("WebSocket ID obtained, connecting...")
     response = r.json()
     websocket_url = response["data"]["attributes"]["url"]
