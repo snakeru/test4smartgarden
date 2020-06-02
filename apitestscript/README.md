@@ -1,11 +1,24 @@
 # APITEST for Gardena smart API
 
-Testscript zum Aufruf der Gardena Smart API ohne ioBroker. 
+Testscript von Gardena [https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme](https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme)
+ zum Aufruf der Gardena Smart API ohne ioBroker. 
+
+Test script from Gardena [https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme](https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme)
+to call Gardena Smart API without integration to ioBroker
+
 Dient zum Debuggen bei Problemen mit der Schnittstelle oder 
 den darin übertragenen Daten.
 
+Used for debugging problems with the interface or
+the data transmitted in it.
+
+
+
 Das Script `apitest.py` auf den Computer kopieren.
 Darin muss man gleich in den oberen Zeilen die eigenen Daten eintragen. 
+
+Copy the script `apitest.py` to the computer.
+You have to enter your own data in the top lines.
 
 ```
 # account specific values
@@ -16,21 +29,27 @@ API_KEY =  'myApplicationApiKey'
 ```
 
 Aufruf des scriptes mit
+
+Call script with 
+
 ```
 python3 apitest.py
 ```
 
 Bitte posted nirgends die vollständigen Ausgaben des Scriptes, es stehen EURE token in der Ausgabe. 
+I.d.R. reichen mir die Angaben ab der folgenden Zeile 
 
-I.d.R. reichen mir die Angaben ab einer Zeile 
+Please don't post the complete output of the script, YOUR token are in the output.
+Usually the information starting from the following line is enough for me 
 
 ```
 ### connected ###
 ```
 
-aus. 
+Zur Info bei evtl. fehlenden Modulen für die Nutzung von *python3*. Ich musste bei mir folgendes installieren:
 
-Zur Info bei evlt. fehlenden Modulen für die Nutzung von *python3*. Ich musste bei mir folgendes installieren:
+For information about any missing modules for the use of *python3*. I had to install the following for me:
+
 ```
 pi@ioBroker:~ $ sudo apt-get install python3
 ...
