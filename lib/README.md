@@ -1,8 +1,7 @@
 # api.js test for Gardena smart API
 
-## currently not in use
 
-<del>
+
 Test einer Spezialversion von `api.js`
 
 - mower id mit Suffix
@@ -54,6 +53,5 @@ Datum + Dateigrößen können abweichen.
 
 **ioBroker smartgarden Adapter starten**
 
-</del>
 
 
