@@ -1,8 +1,5 @@
 # api.js test for Gardena smart API
 
-## currently not in use
-
-<del>
 Test einer Spezialversion von `api.js`
 
 - mower id mit Suffix
@@ -63,6 +60,6 @@ Wenn die Probleme behoben sind, dann reicht mir eine Info. Falls die Probleme we
 dann bitte ein log mit loglevel 3 an mich senden.
 Danke
 
-</del>
+
 
 
