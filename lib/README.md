@@ -1,11 +1,17 @@
 # api.js test for Gardena smart API
 
+## currently not in use
 
 
 Test einer Spezialversion von `api.js`
 
 - mower id mit Suffix
 - invalid date
+- PAUSE for SERVICE_VALVE
+  - To skip automatic operation until specified time, the currently active 
+    operation might or might not be cancelled (depends on device model) use string 
+    `PAUSE_<number_of_seconds>`, e.g. `PAUSE_86400` to pause for 24 hours
+
 
 **ioBroker smartgarden Adapter stoppen**
 
@@ -52,6 +58,7 @@ Datum + Dateigrößen können abweichen.
 
 
 **ioBroker smartgarden Adapter starten**
+
 
 
 
