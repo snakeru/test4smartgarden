@@ -1,3 +1,6 @@
+# Copyright (c) 2020 GARDENA GmbH
+#
+# SPDX-License-Identifier: GPL-3.0
 import datetime
 import time
 import sys
