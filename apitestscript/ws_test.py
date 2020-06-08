@@ -1,3 +1,6 @@
+# Copyright (c) 2019 GARDENA GmbH
+#
+# SPDX-License-Identifier: GPL-3.0
 import websocket
 import datetime
 from threading import Thread
@@ -64,13 +67,13 @@ if __name__ == "__main__":
     assert r.status_code == 200, format(r)
     auth_token = r.json()["access_token"]
     print("Logged in auth_token=(%s)" % auth_token)
-	
+
     headers = {
         "Content-Type": "application/vnd.api+json",
         "x-api-key": API_KEY,
         "Authorization-Provider": "husqvarna",
         "Authorization": "Bearer " + auth_token
-		    }
+    }
 
     print("### get locations ###")
     r = requests.get(f'{SMART_HOST}/v1/locations', headers=headers)
@@ -79,7 +82,7 @@ if __name__ == "__main__":
     location_id = r.json()["data"][0]["id"]
     print("LocationId=(%s)" % location_id)
 
-	
+
     payload = {
         "data": {
             "type": "WEBSOCKET",
