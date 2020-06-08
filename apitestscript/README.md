@@ -1,4 +1,4 @@
-# APITEST for Gardena smart API
+# Webservice test for Gardena smart API
 
 Testscript von Gardena [https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme](https://developer.husqvarnagroup.cloud/apis/GARDENA+smart+system+API#/readme)
  zum Aufruf der Gardena Smart API ohne ioBroker. 
@@ -14,10 +14,10 @@ the data transmitted in it.
 
 
 
-Das Script `apitest.py` auf den Computer kopieren.
+Das Script `ws_test.py` auf den Computer kopieren.
 Darin muss man gleich in den oberen Zeilen die eigenen Daten eintragen. 
 
-Copy the script `apitest.py` to the computer.
+Copy the script `ws_test.py` to the computer.
 You have to enter your own data in the top lines.
 
 ```
@@ -33,7 +33,7 @@ Aufruf des scriptes mit
 Call script with 
 
 ```
-python3 apitest.py
+python3 ws_test.py
 ```
 
 Bitte posted nirgends die vollständigen Ausgaben des Scriptes, es stehen EURE token in der Ausgabe. 
