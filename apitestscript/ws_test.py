@@ -18,25 +18,25 @@ AUTHENTICATION_HOST = 'https://api.authentication.husqvarnagroup.dev'
 SMART_HOST = 'https://api.smart.gardena.dev'
 
 class Client:
-    def on_message(self, message):
+    def on_message(self, ws, message):
         x = datetime.datetime.now()
         print("msg ", x.strftime("%H:%M:%S,%f"))
         print(message)
         sys.stdout.flush()
 
-    def on_error(self, error):
+    def on_error(self, ws, error):
         x = datetime.datetime.now()
         print("error ", x.strftime("%H:%M:%S,%f"))
         print(error)
 
-    def on_close(self):
+    def on_close(self, ws):
         self.live = False
         x = datetime.datetime.now()
         print("closed ", x.strftime("%H:%M:%S,%f"))
         print("### closed ###")
         sys.exit(0)
 
-    def on_open(self):
+    def on_open(self, ws):
         x = datetime.datetime.now()
         print("connected ", x.strftime("%H:%M:%S,%f"))
         print("### connected ###")
